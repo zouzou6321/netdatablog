@@ -3,4 +3,6 @@
 *.py[co]
 *.project
 *.pydevproject
-gulp*
+node_modules
+*.log
+.idea

@@ -1,0 +1,27 @@
+{
+  "name": "zouzou6321",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zouzou6321/netdatablog",
+  "authors": [
+    "胡怀勇 <692673390@qq.com>"
+  ],
+  "description": "js package manage",
+  "keywords": [
+    "net",
+    "data",
+    "blog",
+    "js"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

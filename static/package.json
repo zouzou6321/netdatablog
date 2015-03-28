@@ -1,0 +1,31 @@
+{
+  "name": "netdatablog",
+  "version": "1.0.0",
+  "description": "netdatablog's css and js complie",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zouzou6321/netdatablog.git"
+  },
+  "keywords": [
+    "net",
+    "data",
+    "blog"
+  ],
+  "author": "zouzou6321",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zouzou6321/netdatablog/issues"
+  },
+  "homepage": "https://github.com/zouzou6321/netdatablog",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.9.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.1.0"
+  }
+}

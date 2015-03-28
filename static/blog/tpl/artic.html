@@ -1,0 +1,9 @@
+{% if artic_list %}
+    <ul>
+    {% for artic in artic_list %}
+        <li><a href="{% url 'blog:detail' artic.id %}">{{ artic.artic_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

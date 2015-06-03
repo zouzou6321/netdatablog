@@ -11,11 +11,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='artic',
+            name='news',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('artic_text', models.TextField()),
-                ('pub_date', models.DateTimeField()),
+                ('news_thread', models.TextField(null=True, blank=True)),
+                ('news_title', models.TextField(null=True, blank=True)),
+                ('news_url', models.TextField(null=True, blank=True)),
+                ('news_time', models.TextField(null=True, blank=True)),
+                ('news_from', models.TextField(null=True, blank=True)),
+                ('from_url', models.TextField(null=True, blank=True)),
+                ('news_body', models.TextField(null=True, blank=True)),
+                ('dele', models.BooleanField(default=0)),
             ],
             options={
             },

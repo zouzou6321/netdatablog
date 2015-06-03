@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'c40h^73to5*pb9#ba3#*@vuj+an0l!*@68=x%84byq=uho@zhz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
@@ -56,15 +56,27 @@ WSGI_APPLICATION = 'netdatablog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
+if 'SERVER_SOFTWARE' in os.environ:
+    MYSQL_HOST = 'rdsrayzenzjnv7v.mysql.rds.aliyuncs.com'
+    MYSQL_PORT = 3306
+    MYSQL_USER = 'chongwug'
+    MYSQL_PASS = 'weet6321'
+    MYSQL_DB = 'chongwug'
+else:
+    # Make `python manage.py syncdb` works happy!
+    MYSQL_HOST = 'localhost'
+    MYSQL_PORT = 3306
+    MYSQL_USER = 'root'
+    MYSQL_PASS = 'root'
+    MYSQL_DB = 'datablog'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'netdatablog',
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': 3306,                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': MYSQL_DB,
+        'USER': MYSQL_USER,                      # Not used with sqlite3.
+        'PASSWORD': MYSQL_PASS,                  # Not used with sqlite3.
+        'HOST': MYSQL_HOST,                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': MYSQL_PORT,                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 

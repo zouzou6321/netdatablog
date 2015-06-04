@@ -13,7 +13,7 @@ if 'SERVER_SOFTWARE' in os.environ:
     MYSQL_PORT = 3306
     MYSQL_USER = 'chongwug'
     MYSQL_PASS = 'weet6321'
-    MYSQL_DB = 'chongwug'
+    MYSQL_DB = 'datablog'
 else:
     # Make `python manage.py syncdb` works happy!
     MYSQL_HOST = 'localhost'

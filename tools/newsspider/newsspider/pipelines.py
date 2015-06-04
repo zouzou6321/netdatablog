@@ -22,6 +22,12 @@ else:
     MYSQL_PASS = 'root'
     MYSQL_DB = 'datablog'
 
+MYSQL_HOST = 'rdsrayzenzjnv7v.mysql.rds.aliyuncs.com'
+MYSQL_PORT = 3306
+MYSQL_USER = 'chongwug'
+MYSQL_PASS = 'weet6321'
+MYSQL_DB = 'datablog'
+
 class NewsspiderPipeline(object):
     def process_item(self, item, spider):
         if spider.name != "news":

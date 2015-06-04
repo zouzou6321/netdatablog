@@ -55,7 +55,7 @@ class NewsspiderPipeline(object):
                 item['from_url'].encode('utf-8'),
                 item['news_body']
             )
-            print(sql)
+            # print(sql)
             cur.execute(sql)
             conn.commit()
         conn.close()
